@@ -101,6 +101,9 @@ class Form(forms.BaseForm):
                 },
             },
         ]
+        for old_setting in ('TEMPLATE_DIRS', 'ALLOWED_INCLUDE_ROOTS', 'TEMPLATE_CONTEXT_PROCESSORS', 'TEMPLATE_LOADERS'):
+            if old_setting in settings:
+                del settings[old_setting]
 
         settings['MIDDLEWARE_CLASSES'] = [
             'django.contrib.sessions.middleware.SessionMiddleware',
