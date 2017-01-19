@@ -68,7 +68,7 @@ setup(
         # TODO: should be in (aldryn-)django-cms
         'django-reversion<1.9',
 
-        'easy-thumbnails==2.2.1.1',
+        'easy-thumbnails>=2.2.1.1',
     ) + extra_dependencies,
     entry_points='''
         [console_scripts]
